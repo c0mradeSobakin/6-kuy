@@ -16,14 +16,7 @@ If you read "...It Should encode XXX", the "XXX" is the expected result, not the
 
 
 def duplicate_encode(word):
-    Letters_in_the_word = list(word.lower())
-    result = ''
-    for i in Letters_in_the_word:
-        if Letters_in_the_word.count(i) == 1:
-            result += '('
-        else:
-            result += ')'
-    return result
+    return "".join(["(" if word.lower().count(c) == 1 else ")" for c in word.lower()])
 
 
 print(duplicate_encode("(( @"))
