@@ -38,6 +38,8 @@ Remarks:
 1 - if a result in seconds is ab.xy... it will be given truncated as ab.
 2 - if the given string is "" you will return 
 """""
+import time
+
 
 def stat(strg):
     # your code
