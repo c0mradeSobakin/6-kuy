@@ -42,4 +42,4 @@ import time
 
 
 def stat(strg):
-    # your code
+    прив как дела
