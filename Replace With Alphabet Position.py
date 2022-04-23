@@ -17,4 +17,22 @@ def alphabet_position(text):
         if i in alphabet:
             result += str(alphabet.find(i) + 1) + " "
     return result
+
+
 print(alphabet_position("The sunset sets at twelve o' clock."))
+
+# Решения других пацанов
+''' def alphabet_position(text):
+        return ' '.join(str(ord(c) - 96) for c in text.lower() if c.isalpha())      #это просто гениально!!!
+    -------------------------------------------------------------------------------------------------------------------
+    
+    def alphabet_position(s):
+        return " ".join(str(ord(c)-ord("a")+1) for c in s.lower() if c.isalpha())       #ахах ещё гениальнее!!!
+    -------------------------------------------------------------------------------------------------------------------
+    
+    from string import ascii_lowercase
+
+
+    def alphabet_position(text):
+        return ' '.join(str(ascii_lowercase.index(n.lower()) + 1) for n in text if n.isalpha())       #интересный способ
+    '''
