@@ -7,4 +7,21 @@
 
 
 def pig_it(text):
-    #your code here
+    changeable_word = []
+    result = []
+    for i in text.split():
+        if len(i) == 1:
+            result.append(i)
+            continue
+        for j in i:
+            changeable_word.append(j)
+            if len(changeable_word) == len(i):
+                changeable_word.append(changeable_word[0])
+                changeable_word.remove(changeable_word[0])
+                changeable_word.append('ay ')
+                result.append("".join(changeable_word))
+                changeable_word.clear()
+    return "".join(result)
+
+
+print(pig_it("Pig latin is cool"))
