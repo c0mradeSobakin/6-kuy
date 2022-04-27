@@ -22,7 +22,7 @@ def duplicate_count(text):
     for symbol in list_symbol: # передавать список снова? декрементировать итерируемую ссылку "symbol"??
         if list_symbol.count(symbol) > 1:
             result += 1
-            while symbol in list_symbol: list_symbol.remove(symbol) # поиграть с ремувом???
+            while symbol in list_symbol: list_symbol.remove(symbol) # поиграть с ремувом?
     return result
 
 print(duplicate_count('Mu9V9YN2fQlkBsjvuxumTocf7JK'))
