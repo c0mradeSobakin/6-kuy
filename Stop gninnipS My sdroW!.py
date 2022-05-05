@@ -9,8 +9,14 @@
 #             spinWords( "This is another test" )=> returns "This is rehtona test"
 
 def spin_words(sentence):
-    result =  sentence.split()
-    return ''.join(i[::-1] for i in result if len(i) >= 5) # Как передать список если уже передается слово?
+    result = []
+    text =  sentence.split()
+    for i in text:
+        if len(i) >= 5:
+            result.append(i[::-1])
+        else:
+            result.append(i)
+    return " ".join(result)
 
 
 print(spin_words("This is another test"))
